@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "hcQa6wmZ/4sAs89JWWEV6ZU0aFq8/OzFxets/NJMhAwraC/FTKJwnbVv8tny/xcIbYSL6BueyqAJwZPsfEr5xg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Lautaro\\Desktop\\PP_Escaner_LautaroTorresDistefano\\Entidades\\Entidades.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lautaro\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.18\\microsoft.windowsdesktop.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\Lautaro\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.18\\microsoft.netcore.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\Lautaro\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.18\\microsoft.aspnetcore.app.ref.7.0.18.nupkg.sha512"
+  ],
+  "logs": []
+}
