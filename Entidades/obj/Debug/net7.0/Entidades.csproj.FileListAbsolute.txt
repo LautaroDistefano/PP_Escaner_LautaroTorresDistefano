@@ -9,3 +9,4 @@ C:\Users\Lautaro\Desktop\PP_Escaner_LautaroTorresDistefano\Entidades\obj\Debug\n
 C:\Users\Lautaro\Desktop\PP_Escaner_LautaroTorresDistefano\Entidades\obj\Debug\net7.0\refint\Entidades.dll
 C:\Users\Lautaro\Desktop\PP_Escaner_LautaroTorresDistefano\Entidades\obj\Debug\net7.0\Entidades.pdb
 C:\Users\Lautaro\Desktop\PP_Escaner_LautaroTorresDistefano\Entidades\obj\Debug\net7.0\ref\Entidades.dll
+C:\Users\Lautaro\Desktop\PP_Escaner_LautaroTorresDistefano\Entidades\obj\Debug\net7.0\Entidades.sourcelink.json

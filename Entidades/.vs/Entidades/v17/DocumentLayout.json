@@ -6,24 +6,24 @@
       "AbsoluteMoniker": "D:0:0:{2374653D-71F7-4BE8-BD3B-E0EA003B8CC7}|..\\Test\\Test.csproj|c:\\users\\lautaro\\desktop\\pp_escaner_lautarotorresdistefano\\test\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9CBBF38-8A89-46F5-B8A4-EBDA64D770F5}|Entidades.csproj|c:\\users\\lautaro\\desktop\\pp_escaner_lautarotorresdistefano\\entidades\\informes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9CBBF38-8A89-46F5-B8A4-EBDA64D770F5}|Entidades.csproj|solutionrelative:informes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C9CBBF38-8A89-46F5-B8A4-EBDA64D770F5}|Entidades.csproj|C:\\Users\\Lautaro\\Desktop\\PP_Escaner_LautaroTorresDistefano\\Entidades\\documento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9CBBF38-8A89-46F5-B8A4-EBDA64D770F5}|Entidades.csproj|solutionrelative:documento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9CBBF38-8A89-46F5-B8A4-EBDA64D770F5}|Entidades.csproj|C:\\Users\\Lautaro\\Desktop\\PP_Escaner_LautaroTorresDistefano\\Entidades\\mapa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9CBBF38-8A89-46F5-B8A4-EBDA64D770F5}|Entidades.csproj|solutionrelative:mapa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9CBBF38-8A89-46F5-B8A4-EBDA64D770F5}|Entidades.csproj|C:\\Users\\Lautaro\\Desktop\\PP_Escaner_LautaroTorresDistefano\\Entidades\\escaner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9CBBF38-8A89-46F5-B8A4-EBDA64D770F5}|Entidades.csproj|solutionrelative:escaner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9CBBF38-8A89-46F5-B8A4-EBDA64D770F5}|Entidades.csproj|C:\\Users\\Lautaro\\Desktop\\PP_Escaner_LautaroTorresDistefano\\Entidades\\informes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9CBBF38-8A89-46F5-B8A4-EBDA64D770F5}|Entidades.csproj|solutionrelative:informes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9CBBF38-8A89-46F5-B8A4-EBDA64D770F5}|Entidades.csproj|C:\\Users\\Lautaro\\Desktop\\PP_Escaner_LautaroTorresDistefano\\Entidades\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9CBBF38-8A89-46F5-B8A4-EBDA64D770F5}|Entidades.csproj|solutionrelative:libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9CBBF38-8A89-46F5-B8A4-EBDA64D770F5}|Entidades.csproj|C:\\Users\\Lautaro\\Desktop\\PP_Escaner_LautaroTorresDistefano\\Entidades\\escaner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9CBBF38-8A89-46F5-B8A4-EBDA64D770F5}|Entidades.csproj|solutionrelative:escaner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9CBBF38-8A89-46F5-B8A4-EBDA64D770F5}|Entidades.csproj|C:\\Users\\Lautaro\\Desktop\\PP_Escaner_LautaroTorresDistefano\\Entidades\\mapa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9CBBF38-8A89-46F5-B8A4-EBDA64D770F5}|Entidades.csproj|solutionrelative:mapa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,7 +43,7 @@
               "RelativeDocumentMoniker": "..\\Test\\Program.cs",
               "ToolTip": "C:\\Users\\Lautaro\\Desktop\\PP_Escaner_LautaroTorresDistefano\\Test\\Program.cs",
               "RelativeToolTip": "..\\Test\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAkAAAA",
+              "ViewState": "AQIAAJIAAAAAAAAAAAAAwLQAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-18T06:06:35.046Z",
               "IsPinned": true,
@@ -51,52 +51,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Escaner.cs",
               "DocumentMoniker": "C:\\Users\\Lautaro\\Desktop\\PP_Escaner_LautaroTorresDistefano\\Entidades\\Escaner.cs",
               "RelativeDocumentMoniker": "Escaner.cs",
               "ToolTip": "C:\\Users\\Lautaro\\Desktop\\PP_Escaner_LautaroTorresDistefano\\Entidades\\Escaner.cs",
               "RelativeToolTip": "Escaner.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADgAAAAZAAAA",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAswFQAAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-19T00:44:18.516Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Informes.cs",
               "DocumentMoniker": "C:\\Users\\Lautaro\\Desktop\\PP_Escaner_LautaroTorresDistefano\\Entidades\\Informes.cs",
               "RelativeDocumentMoniker": "Informes.cs",
               "ToolTip": "C:\\Users\\Lautaro\\Desktop\\PP_Escaner_LautaroTorresDistefano\\Entidades\\Informes.cs",
               "RelativeToolTip": "Informes.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADsAAAAyAAAA",
+              "ViewState": "AQIAABkAAAAAAAAAAAAUwBoAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-20T03:35:38.517Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Documento.cs",
               "DocumentMoniker": "C:\\Users\\Lautaro\\Desktop\\PP_Escaner_LautaroTorresDistefano\\Entidades\\Documento.cs",
               "RelativeDocumentMoniker": "Documento.cs",
               "ToolTip": "C:\\Users\\Lautaro\\Desktop\\PP_Escaner_LautaroTorresDistefano\\Entidades\\Documento.cs",
               "RelativeToolTip": "Documento.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAowCcAAAAMAAAA",
+              "ViewState": "AQIAADMAAAAAAAAAAAA3wD8AAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-16T01:38:24.441Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Mapa.cs",
               "DocumentMoniker": "C:\\Users\\Lautaro\\Desktop\\PP_Escaner_LautaroTorresDistefano\\Entidades\\Mapa.cs",
               "RelativeDocumentMoniker": "Mapa.cs",
               "ToolTip": "C:\\Users\\Lautaro\\Desktop\\PP_Escaner_LautaroTorresDistefano\\Entidades\\Mapa.cs",
               "RelativeToolTip": "Mapa.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAAMAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAQwAwAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-16T21:37:26.183Z",
               "EditorCaption": ""
@@ -109,7 +109,7 @@
               "RelativeDocumentMoniker": "Libro.cs",
               "ToolTip": "C:\\Users\\Lautaro\\Desktop\\PP_Escaner_LautaroTorresDistefano\\Entidades\\Libro.cs",
               "RelativeToolTip": "Libro.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAcwAcAAAAVAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAqwDcAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-16T21:37:13.27Z",
               "EditorCaption": ""

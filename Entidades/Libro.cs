@@ -8,8 +8,8 @@ namespace Entidades
         //Propiedades
         private int numPaginas;
         //Constructor
-        public Libro(int anio, string autor, string barcode, string numNormalizado, string titulo, int numPaginas)
-            : base(anio, autor, barcode, numNormalizado, titulo)
+        public Libro(string titulo, string autor, int anio, string numNormalizado, string codebar, int numPaginas)
+            : base(anio, autor, codebar, numNormalizado, titulo)
         {
             this.numPaginas = numPaginas;
         }
@@ -53,7 +53,7 @@ namespace Entidades
             {
                 return true;
             }
-            return true;
+            return false;
         }
     }
 }

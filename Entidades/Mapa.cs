@@ -14,8 +14,8 @@ namespace Entidades
         int superficie;
         
         //Constructor
-        public Mapa(string titulo, string autor, int anio, string barcode,
-            int ancho, int alto, string numNormalizado=null) : base (anio, autor, barcode, numNormalizado, titulo)
+        public Mapa(string titulo, string autor, int anio, string numNormalizado, string codebar,
+            int ancho, int alto) : base (anio, autor, codebar, numNormalizado, titulo)
         {
             this.alto = alto;
             this.ancho = ancho;

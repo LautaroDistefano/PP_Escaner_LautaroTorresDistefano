@@ -66,15 +66,25 @@ namespace Entidades
             return false;
         }
 
-        public static Escaner operator +(Escaner escaner, Documento documento)
+        public static bool operator +(Escaner escaner, Documento documento)
         {
-            //Sobrecarga del operador + | agrega documento a la lista de documentos de un escaner
-            if ((!escaner.listaDocumentos.Contains(documento) && documento.Estado == Paso.Inicio))
+            // Validar el tipo de documento antes de agregarlo
+            if ((escaner.tipo == TipoDoc.libro && documento is Libro) ||
+                (escaner.tipo == TipoDoc.mapa && documento is Mapa))
             {
-                escaner.CambiarEstadoDocumento(documento);
-                escaner.listaDocumentos.Add(documento);
+                if (!escaner.listaDocumentos.Contains(documento) && documento.Estado == Paso.Inicio)
+                {
+                    escaner.CambiarEstadoDocumento(documento);
+                    escaner.listaDocumentos.Add(documento);
+                    return true;
+                }
             }
-            return escaner;
+            else
+            {
+                //En caso de que no se pueda agregar el documento, avisamos
+                Console.WriteLine("El documento no se puede agregar");
+            }
+            return false;
         }
 
         public static bool operator -(Escaner escaner, Documento documento)

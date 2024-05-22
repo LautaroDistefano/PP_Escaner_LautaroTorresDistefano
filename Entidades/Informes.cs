@@ -49,7 +49,7 @@ namespace Entidades
             MostrarDocumentosPorEstado(e, Paso.EnEscaner, out extension, out cantidad, out resumen);
         }
 
-        public static void MostrarEnRevisión(Escaner e, out int extension, out int cantidad, out string resumen)
+        public static void MostrarEnRevision(Escaner e, out int extension, out int cantidad, out string resumen)
         {
             //Devuelve datos en paso "EnRevision"
             MostrarDocumentosPorEstado(e, Paso.EnRevision, out extension, out cantidad, out resumen);
