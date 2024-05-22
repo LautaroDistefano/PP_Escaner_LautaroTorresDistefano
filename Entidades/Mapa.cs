@@ -28,7 +28,7 @@ namespace Entidades
 
         public static bool operator ==(Mapa mapa1, Mapa mapa2)
         {
-            //Verifica si dos libros son iguales => true | Si son != => false
+            //Verifica si dos mapas son iguales => true | Si son != => false
             if ((mapa1.Barcode == mapa2.Barcode) || (mapa1.Titulo == mapa2.Titulo && mapa1.Autor == mapa2.Autor 
                 && mapa1.Anio == mapa2.Anio && mapa1.Superficie == mapa2.Superficie))
             {
