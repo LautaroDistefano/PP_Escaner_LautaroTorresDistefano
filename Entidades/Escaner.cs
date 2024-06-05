@@ -1,112 +1,117 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static Entidades.Documento;
 
 namespace Entidades
 {
     public class Escaner
     {
-        //Propiedades
-        private List<Documento> listaDocumentos;
-        private Departamento locacion;
-        private string marca;
-        private TipoDoc tipo;
+        List<Documento> listaDocumentos;
+        Departamento locacion;
+        string marca;
+        TipoDoc tipo;
 
-        //Enumerados
+        // Enumeración para el departamento
         public enum Departamento
-        {
-            nulo,
-            mapoteca,
-            procesosTecnicos
-        }
+        {nulo, mapoteca, procesosTecnicos}
 
+        // Enumeración para el tipo de documento
         public enum TipoDoc
-        {
-            libro,
-            mapa
-        }
+        {libro, mapa}
 
-        //Constructor
+        // Constructor de la clase Escaner
         public Escaner(string marca, TipoDoc tipo)
         {
             this.marca = marca;
             this.tipo = tipo;
-            if (this.tipo == TipoDoc.libro){this.locacion = Departamento.procesosTecnicos;}
-            else if (this.tipo == TipoDoc.mapa){this.locacion = Departamento.mapoteca;}
-            else{this.locacion = Departamento.nulo;}
-            this.listaDocumentos = new List<Documento>();
-        }
+            listaDocumentos = new List<Documento>();
 
-        //Getters
-        public List<Documento> ListaDocumentos { get { return this.listaDocumentos; } }
-        public Departamento Locacion { get { return this.locacion; } }
-        public string Marca { get { return this.marca; } }
-        public TipoDoc Tipo { get { return this.tipo; } }
-
-        //Sobrecargas | == | != | + | - |
-
-        public static bool operator ==(Escaner escaner, Documento documento)
-        {
-            foreach (Documento doc in escaner.listaDocumentos)
+            // Asignar la locacion según el tipo de documento
+            if (this.tipo == TipoDoc.libro)
             {
-                if (doc == documento) return true;
-            }
-            return false;
-        }
-
-        public static bool operator !=(Escaner escaner, Documento documento)
-        {
-            if (escaner.listaDocumentos.Contains(documento))
-            { 
-                return !(escaner == documento);
-            }
-            return false;
-        }
-
-        public static bool operator +(Escaner escaner, Documento documento)
-        {
-            // Validar el tipo de documento antes de agregarlo
-            if ((escaner.tipo == TipoDoc.libro && documento is Libro) ||
-                (escaner.tipo == TipoDoc.mapa && documento is Mapa))
-            {
-                if (!escaner.listaDocumentos.Contains(documento) && documento.Estado == Paso.Inicio)
-                {
-                    escaner.CambiarEstadoDocumento(documento);
-                    escaner.listaDocumentos.Add(documento);
-                    return true;
-                }
+                this.locacion = Departamento.procesosTecnicos;
             }
             else
             {
-                //En caso de que no se pueda agregar el documento, avisamos
-                Console.WriteLine("El documento no se puede agregar");
+                this.locacion = Departamento.mapoteca;
             }
-            return false;
         }
 
-        public static bool operator -(Escaner escaner, Documento documento)
+        // Propiedades de solo lectura para acceder a los atributos privados
+        public List<Documento> ListaDocumentos { get => listaDocumentos; }
+        public Departamento Locacion { get => locacion; }
+        public string Marca { get => marca; }
+        public TipoDoc Tipo { get => tipo; }
+
+        // Método para cambiar el estado de un documento en la lista
+        public bool CambiarEstadoDocumento(Documento d)
         {
-            //Sobrecarga del operador - | remueve documento de la lista de documentos de un escaner
-            if (escaner.listaDocumentos.Contains(documento)) 
+            foreach (Documento doc in listaDocumentos)
             {
-                escaner.listaDocumentos.Remove(documento);
-                return true;
+                // Si el documento es un libro y es igual al documento en la lista
+                if (d is Libro libro && ((Libro)d == (Libro)doc))
+                {
+                    return doc.AvanzarEstado(); // Avanzar el estado del documento
+                }
+                // Si el documento es un mapa y es igual al documento en la lista
+                else if (d is Mapa mapa && doc is Mapa mapaExistente && mapa == mapaExistente)
+                {
+                    return doc.AvanzarEstado(); 
+                }
             }
-            return false;
+
+            return false; 
         }
 
-        public bool CambiarEstadoDocumento(Documento documento)
+        // Sobrecarga del operador '+' para agregar un documento a la lista
+        public static bool operator +(Escaner e, Documento d)
         {
-            /// Si la lista de documentos contiene x documento, avanza el estado del mismo
-            if (listaDocumentos.Contains(documento)) 
+            try
             {
-                documento.AvanzarEstado();
-                return true;
+                if (e != d && d.Estado == Documento.Paso.Inicio && e.locacion == Departamento.procesosTecnicos && d is Libro)
+                {
+                    d.AvanzarEstado();
+                    e.listaDocumentos.Add(d);
+                    return true;
+                }
+                else
+                {
+                    if (e != d && d.Estado == Documento.Paso.Inicio && e.locacion == Departamento.mapoteca && d is Mapa)
+                    {
+                        d.AvanzarEstado();
+                        e.listaDocumentos.Add(d);
+                        return true;
+                    }
+                }
+                return false;
             }
-            return false;
+            catch (TipoIncorrectoException ex)
+            {
+                throw new TipoIncorrectoException("El documento no se pudo añadir a la lista", nameof(Escaner), "+", ex);
+            }
+        }
+
+        // Sobrecarga del operador '==' para verificar si un documento está en la lista
+        public static bool operator ==(Escaner e, Documento d)
+        {
+            foreach (Documento doc in e.listaDocumentos)
+            {
+                if (d is Libro && doc is Libro && ((Libro)d) == ((Libro)doc))
+                {
+                    return true;
+                }
+                else if (d is Mapa && doc is Mapa && ((Mapa)d) == ((Mapa)doc))
+                {
+                    return true;
+                }
+            }
+            throw new TipoIncorrectoException("Este escáner no acepta este tipo de documento", nameof(Escaner), "==");
+        }
+
+
+        // Sobrecarga del operador '!=' para verificar si un documento no está en la lista
+        public static bool operator !=(Escaner e, Documento d)
+        {
+            return !(e == d); // Negación del operador '=='
         }
     }
 }

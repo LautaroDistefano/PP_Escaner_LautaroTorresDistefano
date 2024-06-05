@@ -30,18 +30,12 @@ namespace Entidades
             return texto.ToString();
         }
 
-        public static bool operator ==(Libro libro1, Libro libro2)
+        public static bool operator ==(Libro l1, Libro l2)
         {
-            //Verifica si dos libros son iguales
-            if ((libro1.Barcode == libro2.Barcode) || (libro1.ISBN == libro2.ISBN) ||
-                ((libro1.Titulo == libro2.Titulo) && (libro1.Autor == libro2.Autor)))
+            if (l1 is Libro && l2 is Libro)
             {
-                return true;
-            }
-
-            if (libro1 is null || libro2 is null)
-            {
-                return false;
+                return (l1.Barcode == l2.Barcode || l1.ISBN == l2.ISBN ||
+                    (l1.Titulo == l2.Titulo && l1.Autor == l2.Autor));
             }
             return false;
         }

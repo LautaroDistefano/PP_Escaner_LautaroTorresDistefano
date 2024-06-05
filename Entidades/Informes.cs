@@ -9,32 +9,43 @@ namespace Entidades
 {
     public static class Informes
     {
-        public static void MostrarDocumentosPorEstado(Escaner e, Paso estado, out int extension, out int cantidad, out string resumen)
+        private static void MostrarDocumentosPorEstado(Escaner e, Paso estado, out int extension, out int cantidad, out string resumen)
         {
-            //Busca dentro de la lista de documentos de un escaner datos y los devuelve
             extension = 0;
             cantidad = 0;
-            List<string> resumenList = new List<string>();
+            resumen = "";
+            List<Documento> listaDistribuidos = new List<Documento>();
 
-            foreach (Documento documento in e.ListaDocumentos)
+            // Extension: el total de paginas en el caso de los libros y el total de cm2 en el caso de los
+            // mapas.
+            foreach (Documento doc in e.ListaDocumentos)
             {
-                if (documento.Estado == estado)
+                if (doc.Estado == estado)
                 {
-                    cantidad++;
-                    if (documento is Libro libro)
+                    if (doc is Libro)
                     {
+                        Libro libro = (Libro)doc;
                         extension += libro.NumPaginas;
-                        resumenList.Add($"Libro: {libro.Titulo}, Autor: {libro.Autor}, Páginas: {libro.NumPaginas}");
                     }
-                    else if (documento is Mapa mapa)
+                    else
                     {
-                        extension += mapa.Superficie;
-                        resumenList.Add($"Mapa: {mapa.Titulo}, Autor: {mapa.Autor}, Superficie: {mapa.Superficie} cm2");
+                        if (doc is Mapa mapa)
+                        {
+                            //Mapa mapa = (Mapa)doc;
+                            extension += mapa.Superficie;
+                        }
                     }
+                    cantidad++;
+                    listaDistribuidos.Add(doc);
+                    resumen += doc.ToString();
                 }
             }
 
-            resumen = string.Join("\n", resumenList);
+            if (listaDistribuidos.Count == 0)
+            {
+                resumen = "";
+            }
+
         }
 
         public static void MostrarDistribuidos(Escaner e, out int extension, out int cantidad, out string resumen)

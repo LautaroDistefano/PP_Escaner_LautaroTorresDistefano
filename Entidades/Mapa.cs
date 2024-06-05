@@ -42,14 +42,9 @@ namespace Entidades
             return false;
         }
 
-        public static bool operator !=(Mapa mapa1, Mapa mapa2)
+        public static bool operator !=(Mapa m1, Mapa m2)
         {
-            //Verifica si dos libros son distintos
-            if (mapa1 != mapa2) 
-            {
-                return true;
-            }
-            return true;
+            return !(m1.Barcode == m2.Barcode);
         }
 
         public override string ToString()

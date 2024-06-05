@@ -26,13 +26,25 @@ namespace Entidades
 
         public bool AvanzarEstado()
         {
-            //Esta funcion se encarga de avanzar al siguiente estado de un documento
-            if (this.estado == Paso.Terminado)
+            switch (this.estado)
             {
-                return false;
+                case Paso.Inicio:
+                    this.estado = Paso.Distribuido;
+                    return true;
+                case Paso.Distribuido:
+                    this.estado = Paso.EnEscaner;
+                    return true;
+                case Paso.EnEscaner:
+                    this.estado = Paso.EnRevision;
+                    return true;
+                case Paso.EnRevision:
+                    this.estado = Paso.Terminado;
+                    return true;
+                case Paso.Terminado:
+                    return false;
+                default:
+                    return false;
             }
-            this.estado++;
-            return true;
         }
 
         public override string ToString()
@@ -57,11 +69,7 @@ namespace Entidades
         //Pasos de los documentos
         public enum Paso
         {
-            Inicio,
-            Distribuido,
-            EnEscaner,
-            EnRevision,
-            Terminado
+            Inicio, Distribuido, EnEscaner, EnRevision, Terminado
         }
     }
 }
