@@ -81,8 +81,8 @@ namespace Entidades
                         e.listaDocumentos.Add(d);
                         return true;
                     }
+                    return false;
                 }
-                return false;
             }
             catch (TipoIncorrectoException ex)
             {
@@ -93,6 +93,10 @@ namespace Entidades
         // Sobrecarga del operador '==' para verificar si un documento está en la lista
         public static bool operator ==(Escaner e, Documento d)
         {
+            if ((e.locacion == Departamento.mapoteca && d is not Mapa) || (e.locacion == Departamento.procesosTecnicos && d is not Libro))
+            {
+                throw new TipoIncorrectoException("Este escáner no acepta este tipo de documento", "Clase Escaner.cs", "Operador ==");
+            }
             foreach (Documento doc in e.listaDocumentos)
             {
                 if (d is Libro && doc is Libro && ((Libro)d) == ((Libro)doc))
@@ -104,7 +108,7 @@ namespace Entidades
                     return true;
                 }
             }
-            throw new TipoIncorrectoException("Este escáner no acepta este tipo de documento", nameof(Escaner), "==");
+            return false;
         }
 
 

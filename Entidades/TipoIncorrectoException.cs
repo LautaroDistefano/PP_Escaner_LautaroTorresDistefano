@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Entidades
 {
@@ -23,10 +24,11 @@ namespace Entidades
 
         public override string ToString()
         {
-            string innerExceptionMessage = this.InnerException != null ? this.InnerException.Message : "No hay detalles adicionales.";
-            return $"Excepción en el método {nombreMetodo} de la clase {nombreClase}.\n" +
-                   "Algo salió mal, revisa los detalles.\n" +
-                   $"Detalles: {innerExceptionMessage}";
+            StringBuilder texto = new StringBuilder();
+            texto.AppendFormat("Excepción en el método {0} de la clase {1}.\n", this.nombreMetodo, this.nombreClase);
+            texto.AppendLine("Algo salió mal, revisa los detalles.");
+            texto.AppendFormat("Detalles: {0}", this.InnerException?.Message ?? "No hay detalles adicionales.");
+            return texto.ToString();
         }
 
         public string NombreClase { get => nombreClase; }
